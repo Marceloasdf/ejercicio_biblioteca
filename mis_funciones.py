@@ -27,8 +27,14 @@ def opcion2():
 
 
 
-def opcion3():
-    pass
+def opcion3(libros):
+    print("buscar libro por nombre")
+    titulo_libro=input("que libro quiere buscar? :")
+    for x in libros:
+        if x.get("titulo")==titulo_libro:   
+            print(x)
+    
+
 def opcion4():
     pass
 def opcion5():
