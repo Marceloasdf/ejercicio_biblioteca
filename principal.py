@@ -1,4 +1,4 @@
-import time, os
+import time, os,msvcrt
 from mis_funciones import *
 while True:
     print("menu biblioteca")
@@ -9,7 +9,7 @@ while True:
     print("5) guardar libros en archivo .json ")
     print("6) Salir")
     print("\n")
-    opc=int(input("Ingrese opcion: "))
+    opc=validar_opcion([1,2,3,4,5,6])
     
     if opc==1:
         opcion1()
@@ -23,3 +23,4 @@ while True:
         opcion5()
     elif opc==6:
         opcion6()
+        
