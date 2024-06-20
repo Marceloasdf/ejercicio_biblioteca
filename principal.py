@@ -20,6 +20,6 @@ while True:
     elif opc==4:
         opcion4(libros)
     elif opc==5:
-        pass
+        opcion5()
     elif opc==6:
         opcion6()
