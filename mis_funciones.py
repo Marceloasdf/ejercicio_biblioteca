@@ -29,14 +29,18 @@ def opcion2():
 
 def opcion3(libros):
     print("buscar libro por nombre")
-    titulo_libro=input("que libro quiere buscar? :")
+    titulo_libro=input("que libro quiere buscar?: ")
     for x in libros:
         if x.get("titulo")==titulo_libro:   
+            print("libro encontrado")
             print(x)
+        else:
+            print("libro no encontrado, lo sentimos")
     
 
-def opcion4():
-    pass
+def opcion4(ibros):
+    libro_actualizar=input("que libro quiere actualizar?: ")
+
 def opcion5():
     pass
 def opcion6():

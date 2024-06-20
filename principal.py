@@ -8,8 +8,9 @@ while True:
     print("4) actualizar informacion de un libro")
     print("5) guardar libros en archivo .json ")
     print("6) Salir")
-
-    opc=int(input("Ingrese opcion:"))
+    print("\n")
+    opc=int(input("Ingrese opcion: "))
+    
     if opc==1:
         opcion1()
     elif opc==2:
@@ -17,7 +18,7 @@ while True:
     elif opc==3:
         opcion3(libros)
     elif opc==4:
-        pass
+        opcion4(libros)
     elif opc==5:
         pass
     elif opc==6:
