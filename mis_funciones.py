@@ -18,10 +18,10 @@ def opcion2():
         print("no hay libros guardados, primero guarde libros en opcion 1")
     else:
         for l in libros:
-            print(f"Titulo:{l['titulo']}")
-            print(f"autor:{l['autor']}")
-            print(f"fecha de publicacion:{l['fecha.de.publicacion']}")
-            print(f"genero:{l['genero']}\n") 
+            print(f"Titulo:",l["titulo"])
+            print(f"autor:",l["autor"])
+            print(f"fecha de publicacion:",l["fecha.de.publicacion"])
+            print(f"genero:",l["genero"]) 
 
 
 
@@ -32,14 +32,14 @@ def opcion3(libros):
         print("no hay libros guardados, primero guarde libros en opcion 1")
     else:
         print("buscar libro por nombre")
-        titulo_libro=input("que libro quiere buscar?: ")
-        for x in libros:
-            if x.get("titulo")==titulo_libro:   
-                print("libro encontrado")
-                print(x)
-            else:
-                print("libro no encontrado, lo sentimos")
-    
+        titulo_buscar=input("que libro quiere buscar?: ")
+        for li in libros:
+            if titulo_buscar.lower()==li["titulo"].lower():
+                print(f"Titulo:",li["titulo"])
+                print(f"autor:",li["autor"])
+                print(f"fecha de publicacion:",li["fecha.de.publicacion"])
+                print(f"genero:",li["genero"])
+
 
 def opcion4(libros):
     if len(libros)==0:
