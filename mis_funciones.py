@@ -39,6 +39,8 @@ def opcion3(libros):
                 print(f"autor:",li["autor"])
                 print(f"fecha de publicacion:",li["fecha.de.publicacion"])
                 print(f"genero:",li["genero"])
+                return
+        print("no encontramos el libro, lo sentimos")
 
 
 def opcion4(libros):
@@ -47,12 +49,16 @@ def opcion4(libros):
     else:
         print("actualizar libro")
         libro_actualizar=input("que libro quiere actualizar?: ")
-        for x in libros:
-            if x.get("titulo")==libro_actualizar:
-                print("libro encontrado")
-                pass
-            else:
-                print("libro no encontrado, lo sentimos")
+        for li in libros:
+            if libro_actualizar.lower()==li["titulo"].lower():
+                li["autor"]=input("ingrese nuevo autor: ")
+                li["fecha.de.publicacion"]=int(input("ingrese nueva fecha de publicacion: "))
+                li["genero"]=input("ingrese nuevo genero: ")
+                print("Libro modificado con exito")
+                return
+        print("no encontramos el libro, lo sentimos")
+
+
 
 def opcion5():
     if len(libros)==0:
@@ -60,8 +66,8 @@ def opcion5():
     else:
         print("guardar libros en archivo.json")
         nombre_archivo=validar_nombrearchivo()
-        with open(nombre_archivo+".json","w",newline="") as archivo:
-            json.dump(libros,archivo)
+        with open(nombre_archivo+".json","w") as archivo:
+            json.dump(libros,archivo, indent=4) #para que no quede tan junto el texto, con enters 
             print("archivo creado exitosamente")
 def opcion6():
     print("Adios!")
